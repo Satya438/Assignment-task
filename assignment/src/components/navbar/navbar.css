@@ -1,0 +1,194 @@
+.dashboard {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+.dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: rgb(95, 172, 95);
+  width: 115px;
+}
+.top-nav {
+  display: flex;
+  height: 10vh;
+  width: 95vw;
+  padding-top: 15px;
+}
+.top-nav .title-img {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 3vh;
+  height: 6vh;
+  width: 10vw;
+}
+.top-nav .search-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-left: 70%;
+  width: 120px;
+  height: 20px;
+  /* padding-left: 80rem; */
+  border-radius: 10px;
+}
+.top-nav .Line-chart {
+  width: 60px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  /* display: flex; */
+  /* margin-right: 25%; */
+}
+.top-nav .chart1-r {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.top-nav .charts {
+  height: 100vh;
+  width: 80vw;
+}
+.top-nav .sidebar {
+  margin-top: 30px;
+  margin-left: 165px;
+}
+/* .top-nav .sidebar {
+  height: 100vh;
+  width: 20vw;
+} */
+.top-nav .charts2 {
+  height: 100vh;
+  width: 20vw;
+}
+.top-nav .linechart {
+  height: 45vh;
+  width: 85vw;
+}
+.top-nav .container {
+  margin-left: 105px;
+  width: 100vw;
+  height: 88.5vh;
+  background: rgb(236, 235, 235);
+}
+.top-nav .card-row {
+  margin-top: 85px;
+}
+.dashboard .card-1-text {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+.top-nav .card-1 {
+  height: 05px;
+  display: flex;
+  justify-content: center;
+  width: 66vw;
+  margin-top: 25px;
+}
+.top-nav .card-2 {
+  height: 20rem;
+  width: 30rem;
+}
+.top-nav .card-3 {
+  height: 20rem;
+  width: 30rem;
+}
+.top-nav .card-4 {
+  height: 20rem;
+  width: 20rem;
+}
+.dashboard .button-new {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-left: 65px; */
+}
+@media (max-width: 1750px) {
+  .dashboard {
+    height: 90vh;
+    width: 95vw;
+    position: relative;
+  }
+  .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: rgb(95, 172, 95);
+    width: 115px;
+  }
+  .dashboard .order-table {
+    width: 280px;
+  }
+  .dashboard .css-lmilxk-MuiTypography-root {
+    display: flex;
+    justify-content: center;
+    margin-left: 105px;
+  }
+  .dashboard .card-1-text {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: 180px; */
+    font-size: 16px;
+  }
+  .dashboard .button-new {
+    display: flex;
+    justify-content: flex-end;
+    /* margin-right: 95px; */
+  }
+  .top-nav {
+    display: flex;
+    height: 8vh;
+    width: 85vw;
+    padding-top: 15px;
+  }
+  .dashboard .css-x90y38-MuiPaper-root {
+    height: 325px;
+    width: 605px;
+  }
+}
+@media (max-width: 1550px) {
+  .dashboard {
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+  }
+  .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: rgb(95, 172, 95);
+    width: 115px;
+  }
+  .dashboard .css-x90y38-MuiPaper-root {
+    height: 265px;
+    width: 505px;
+  }
+  .top-nav {
+    display: flex;
+    height: 6vh;
+    width: 65vw;
+    padding-top: 15px;
+  }
+  .top-nav .charts2 {
+    height: 100vh;
+    width: 20vw;
+  }
+  .top-nav .linechart {
+    height: 45vh;
+    width: 85vw;
+  }
+  .top-nav .container {
+    margin-left: 105px;
+    width: 90vw;
+    height: 88.5vh;
+    background: rgb(236, 235, 235);
+  }
+  .top-nav .card-1 {
+    height: 14rem;
+    width: 20rem;
+  }
+  .top-nav .card-2 {
+    height: 14rem;
+    width: 20rem;
+  }
+  .top-nav .card-3 {
+    height: 14rem;
+    width: 20rem;
+  }
+  .top-nav .card-4 {
+    height: 14rem;
+    width: 20rem;
+  }
+}
