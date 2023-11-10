@@ -4,8 +4,12 @@ import {
   Button,
   Container,
   Divider,
+  FormControl,
   Grid,
+  InputLabel,
+  MenuItem,
   Paper,
+  Select,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -23,6 +27,11 @@ const Navbar = () => {
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
+  };
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
   };
   return (
     <>
@@ -46,16 +55,10 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          <div
-            class="col-12"
-            style={{ display: "flex", justifyContent: "flex-start" }}
-          >
+          <div style={{ display: "flex", justifyContent: "flex-start" }}>
             <div class="col-2" className="sidebar">
               <Toolbar>
-                <div
-                  class="row"
-                  style={{ marginTop: "25px", marginLeft: "95px" }}
-                >
+                <div class="row">
                   <Typography>
                     <Button
                       onClick={() => handleButtonClick("Dashboard")}
@@ -130,16 +133,7 @@ const Navbar = () => {
                 </div>
               </Toolbar>
             </div>
-            <div
-              class="col-10"
-              className="container"
-              style={{
-                marginLeft: "75px",
-                background: "rgb(236, 235, 235)",
-                width: "90vw",
-                height: "88.25vh",
-              }}
-            >
+            <div class="col-10" className="container">
               <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
                 <div
                   class="row"
@@ -150,8 +144,7 @@ const Navbar = () => {
                     marginTop: "40px",
                   }}
                 >
-                  <div class="col-1"></div>
-                  <div class="col-4">
+                  <div>
                     <Grid item xs={8} md={7} lg={7}>
                       <Paper
                         sx={{
@@ -170,15 +163,13 @@ const Navbar = () => {
                             noWrap
                             sx={{ flexGrow: 1 }}
                           >
-                            <Grid item xs={8} md={7} lg={7}>
+                            <Grid item xs={6} md={2} lg={2}>
                               <div
-                                class="col-12"
+                                class="row"
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
-                                  direction: "row",
                                   marginTop: "10PX",
-                                  height: "305px",
                                 }}
                               >
                                 <div
@@ -191,33 +182,59 @@ const Navbar = () => {
                                   }}
                                 >
                                   Checking account
-                                  <div
-                                    class="row"
-                                    style={{
-                                      display: "flex",
-                                      justifyContent: "center",
-                                      width: "545px",
-                                      marginTop: "25px",
-                                    }}
-                                  >
-                                    <LineChart data={data} />
-                                  </div>
                                 </div>
-                                <div class="col-1"></div>
-                                {/* <div class="col-1">
-                                  <Select placeholder="Manage">
-                                    <Option>Ten</Option>
-                                    <Option>Twenty</Option>
-                                    <Option>Thirty</Option>
-                                  </Select>
+                                {/* <div >
+                                  <Box sx={{ minWidth: 60 }}>
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">
+                                        Age
+                                      </InputLabel>
+                                      <Select
+                                        labelId="demo-simple-select-label"
+                                        id="demo-simple-select"
+                                        value={age}
+                                        label="Age"
+                                        onChange={handleChange}
+                                      >
+                                        <MenuItem value={10}>Ten</MenuItem>
+                                        <MenuItem value={20}>Twenty</MenuItem>
+                                        <MenuItem value={30}>Thirty</MenuItem>
+                                      </Select>
+                                    </FormControl>
+                                  </Box>
+                                </div>
+                                <div>
+                                  <Box sx={{ minWidth: 120 }}>
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">
+                                        Age
+                                      </InputLabel>
+                                      <Select
+                                        labelId="demo-simple-select-label"
+                                        id="demo-simple-select"
+                                        value={age}
+                                        label="Age"
+                                        onChange={handleChange}
+                                      >
+                                        <MenuItem value={10}>Ten</MenuItem>
+                                        <MenuItem value={20}>Twenty</MenuItem>
+                                        <MenuItem value={30}>Thirty</MenuItem>
+                                      </Select>
+                                    </FormControl>
+                                  </Box>
                                 </div> */}
-                                {/* <div class="col-4">
-                                  <Select label="Manage">
-                                    <Option>Ten</Option>
-                                    <Option>Twenty</Option>
-                                    <Option>Thirty</Option>
-                                  </Select>
-                                </div> */}
+                                <div
+                                  class="row"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    width: "545px",
+                                    height: "280px",
+                                    marginTop: "25px",
+                                  }}
+                                >
+                                  <LineChart data={data} />
+                                </div>
                               </div>
                             </Grid>
                           </Typography>
@@ -249,7 +266,7 @@ const Navbar = () => {
                           >
                             <Grid item xs={8} md={7} lg={7}>
                               <div
-                                class="col-12"
+                                class="col-10"
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
@@ -335,7 +352,7 @@ const Navbar = () => {
                           >
                             <Grid item xs={8} md={7} lg={7}>
                               <div
-                                class="col-12"
+                                class="col-6"
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
@@ -343,7 +360,7 @@ const Navbar = () => {
                                   height: "305px",
                                 }}
                               >
-                                <div class="col-6 card-1-text">
+                                <div class="col-4 card-1-text">
                                   Total Cash Flow
                                   <div
                                     class="row card-3"
@@ -356,28 +373,30 @@ const Navbar = () => {
                                   >
                                     <BarChart />
                                   </div>
+                                  <div
+                                    class="col-2"
+                                    style={{
+                                      display: "flex",
+                                      justifyContent: "flex-end",
+                                      gap: 5,
+                                    }}
+                                  >
+                                    {rectangle}
+                                    In
+                                  </div>
+                                  <br />
+                                  <div
+                                    style={{
+                                      display: "flex",
+                                      justifyContent: "flex-end",
+                                      gap: 5,
+                                    }}
+                                  >
+                                    {rectangle}
+                                    Out
+                                  </div>
                                 </div>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    gap: 5,
-                                  }}
-                                >
-                                  {rectangle}
-                                  In
-                                </div>
-                                <br />
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    gap: 5,
-                                  }}
-                                >
-                                  {rectangle}
-                                  Out
-                                </div>
+
                                 {/* <div class="col-1">
                                   <Select placeholder="Manage">
                                     <Option>Ten</Option>

@@ -47,9 +47,11 @@
   height: 100vh;
   width: 80vw;
 }
-.top-nav .sidebar {
-  margin-top: 30px;
-  margin-left: 165px;
+.dashboard .sidebar {
+  position: relative;
+  width: 70px;
+  margin-top: 50px;
+  margin-left: 15px;
 }
 /* .top-nav .sidebar {
   height: 100vh;
@@ -63,7 +65,9 @@
   height: 45vh;
   width: 85vw;
 }
-.top-nav .container {
+.dashboard .container {
+  display: flex;
+  justify-content: flex-start;
   margin-left: 105px;
   width: 100vw;
   height: 88.5vh;
@@ -141,8 +145,8 @@
     padding-top: 15px;
   }
   .dashboard .css-x90y38-MuiPaper-root {
-    height: 325px;
-    width: 605px;
+    height: 285px;
+    width: 685px;
   }
 }
 @media (max-width: 1550px) {
