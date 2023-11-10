@@ -77,6 +77,10 @@
   justify-content: flex-start;
   font-size: 16px;
 }
+.dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: rgb(95, 172, 95);
+  width: 115px;
+}
 .top-nav .card-1 {
   height: 05px;
   display: flex;

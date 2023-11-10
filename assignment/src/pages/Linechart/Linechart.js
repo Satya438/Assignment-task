@@ -9,7 +9,7 @@ function LineChart({ data }) {
     const svg = d3.select(chartRef.current);
 
     // Set the dimensions of the chart
-    const width = 400;
+    const width = 300;
     const height = 200;
 
     // Create a scale for x and y axes
@@ -38,7 +38,7 @@ function LineChart({ data }) {
       .attr("d", line);
   }, [data]);
 
-  return <svg ref={chartRef} width={400} height={200}></svg>;
+  return <svg ref={chartRef} width={400} height={400}></svg>;
 }
 
 export default LineChart;
