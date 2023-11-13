@@ -9,18 +9,17 @@ function LineChart({ data }) {
     const svg = d3.select(chartRef.current);
 
     // Set the dimensions of the chart
-    const width = 300;
-    const height = 200;
-
+    const containerWidth = chartRef.current.clientWidth;
+    const containerHeight = chartRef.current.clientHeight;
     // Create a scale for x and y axes
     const xScale = d3
       .scaleLinear()
       .domain([0, data.length - 1])
-      .range([0, width]);
+      .range([0, containerWidth]);
     const yScale = d3
       .scaleLinear()
       .domain([0, d3.max(data)])
-      .range([height, 0]);
+      .range([containerHeight, 0]);
 
     // Create a line generator
     const line = d3
@@ -38,7 +37,7 @@ function LineChart({ data }) {
       .attr("d", line);
   }, [data]);
 
-  return <svg ref={chartRef} width={400} height={400}></svg>;
+  return <svg ref={chartRef}></svg>;
 }
 
 export default LineChart;

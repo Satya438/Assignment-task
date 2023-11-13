@@ -183,7 +183,19 @@ const Navbar = () => {
                                 >
                                   Checking account
                                 </div>
-                                {/* <div >
+                                <div
+                                  class="row"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    width: "425px",
+                                    height: "280px",
+                                    marginTop: "25px",
+                                  }}
+                                >
+                                  <LineChart className="linechart" data={data} />
+                                </div>
+                                <div className="dropdown-1">
                                   <Box sx={{ minWidth: 60 }}>
                                     <FormControl fullWidth>
                                       <InputLabel id="demo-simple-select-label">
@@ -204,7 +216,7 @@ const Navbar = () => {
                                   </Box>
                                 </div>
                                 <div>
-                                  <Box sx={{ minWidth: 120 }}>
+                                  <Box sx={{ minWidth: 60 }}>
                                     <FormControl fullWidth>
                                       <InputLabel id="demo-simple-select-label">
                                         Age
@@ -222,18 +234,6 @@ const Navbar = () => {
                                       </Select>
                                     </FormControl>
                                   </Box>
-                                </div> */}
-                                <div
-                                  class="row"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    width: "545px",
-                                    height: "280px",
-                                    marginTop: "25px",
-                                  }}
-                                >
-                                  <LineChart data={data} />
                                 </div>
                               </div>
                             </Grid>
@@ -297,20 +297,6 @@ const Navbar = () => {
                                   </div>
                                 </div>
                                 <div class="col-1"></div>
-                                {/* <div class="col-1">
-                                  <Select placeholder="Manage">
-                                    <Option>Ten</Option>
-                                    <Option>Twenty</Option>
-                                    <Option>Thirty</Option>
-                                  </Select>
-                                </div> */}
-                                {/* <div class="col-4">
-                                  <Select label="Manage">
-                                    <Option>Ten</Option>
-                                    <Option>Twenty</Option>
-                                    <Option>Thirty</Option>
-                                  </Select>
-                                </div> */}
                               </div>
                             </Grid>
                           </Typography>
@@ -329,7 +315,6 @@ const Navbar = () => {
                     // marginLeft: "38px",
                   }}
                 >
-                  <div class="col-1"></div>
                   <div class="col-4" style={{ marginTop: "30px" }}>
                     <Grid item xs={8} md={7} lg={7}>
                       <Paper
@@ -352,48 +337,50 @@ const Navbar = () => {
                           >
                             <Grid item xs={8} md={7} lg={7}>
                               <div
-                                class="col-6"
+                                class="col-2"
                                 style={{
                                   display: "flex",
                                   justifyContent: "space-between",
                                   direction: "row",
-                                  height: "305px",
                                 }}
                               >
-                                <div class="col-4 card-1-text">
+                                <div className="card-1-text">
                                   Total Cash Flow
                                   <div
                                     class="row card-3"
                                     style={{
                                       display: "flex",
                                       justifyContent: "center",
-                                      width: "515px",
+                                      width: "500px",
+                                      height: "285px",
                                       marginTop: "25px",
                                     }}
                                   >
                                     <BarChart />
                                   </div>
-                                  <div
-                                    class="col-2"
-                                    style={{
-                                      display: "flex",
-                                      justifyContent: "flex-end",
-                                      gap: 5,
-                                    }}
-                                  >
-                                    {rectangle}
-                                    In
-                                  </div>
-                                  <br />
-                                  <div
-                                    style={{
-                                      display: "flex",
-                                      justifyContent: "flex-end",
-                                      gap: 5,
-                                    }}
-                                  >
-                                    {rectangle}
-                                    Out
+                                  <div className="badges">
+                                    <div
+                                      class="col-2"
+                                      style={{
+                                        display: "flex",
+                                        justifyContent: "flex-end",
+                                        gap: 5,
+                                      }}
+                                    >
+                                      {rectangle}
+                                      In
+                                    </div>
+                                    <br />
+                                    <div
+                                      style={{
+                                        display: "flex",
+                                        justifyContent: "flex-end",
+                                        gap: 5,
+                                      }}
+                                    >
+                                      {rectangle}
+                                      Out
+                                    </div>
                                   </div>
                                 </div>
 
