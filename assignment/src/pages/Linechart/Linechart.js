@@ -5,31 +5,32 @@ function LineChart({ data }) {
   const chartRef = useRef();
 
   useEffect(() => {
-    // Create the SVG container
     const svg = d3.select(chartRef.current);
 
-    // Set the dimensions of the chart
+    // Set dimensions based on the container size
     const containerWidth = chartRef.current.clientWidth;
     const containerHeight = chartRef.current.clientHeight;
-    // Create a scale for x and y axes
-    const xScale = d3
-      .scaleLinear()
-      .domain([0, data.length - 1])
-      .range([0, containerWidth]);
-    const yScale = d3
-      .scaleLinear()
-      .domain([0, d3.max(data)])
-      .range([containerHeight, 0]);
+
+    const margin = { top: 20, right: 20, bottom: 30, left: 50 };
+    const width = containerWidth - margin.left - margin.right;
+    const height = containerHeight - margin.top - margin.bottom;
 
     // Create a line generator
     const line = d3
       .line()
-      .x((d, i) => xScale(i))
-      .y((d) => yScale(d));
+      .x((_, i) => (i * width) / (data.length - 1))
+      .y((d) => (1 - d / d3.max(data)) * height);
+
+    // Clear previous chart
+    svg.selectAll("*").remove();
+
+    // Append a group element for margins
+    const g = svg
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
 
     // Append the line path to the SVG
-    svg
-      .append("path")
+    g.append("path")
       .datum(data)
       .attr("fill", "none")
       .attr("stroke", "blue")

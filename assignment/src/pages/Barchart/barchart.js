@@ -25,14 +25,19 @@ function BarChart() {
       { label: " ", value: 0 },
       { label: 75, value: 60 },
     ];
-    const margin = { top: 20, right: 490, bottom: 60, left: 0 };
-    const width = 980 - margin.left - margin.right;
-    const height = 300 - margin.top - margin.bottom;
+
+    // Set dimensions based on the container size
+    const containerWidth = svgRef.current.clientWidth;
+    const containerHeight = 250; // Set a fixed height or adjust dynamically
+
+    const margin = { top: 20, right: 20, bottom: 60, left: 0 };
+    const width = containerWidth - margin.left - margin.right;
+    const height = containerHeight - margin.top - margin.bottom;
 
     const svg = d3
       .select(svgRef.current)
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("width", containerWidth)
+      .attr("height", containerHeight)
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -50,7 +55,7 @@ function BarChart() {
 
     // Create bars
     svg
-      .selectAll("ellipse")
+      .selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
@@ -59,17 +64,6 @@ function BarChart() {
       .attr("width", xScale.bandwidth())
       .attr("height", (d) => height - yScale(d.value))
       .attr("fill", "green");
-
-    // Create circles (data points)
-    svg
-      .selectAll("circle")
-      .data(data)
-      .enter()
-      .append("circle")
-      // .attr("cx", (d) => xScale(d.label) + xScale.bandwidth() / 2)
-      // .attr("cy", (d) => yScale(d.value))
-      // .attr("r", 15)
-      .attr("fill", "green"); // You can change this to the desired color
 
     // Add x-axis with labels
     svg

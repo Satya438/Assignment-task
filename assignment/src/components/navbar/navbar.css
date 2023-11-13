@@ -35,14 +35,6 @@
   margin-left: 25px;
   margin-top: 15px;
 }
-.top-nav .Line-chart {
-  width: 60px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  /* display: flex; */
-  /* margin-right: 25%; */
-}
 .top-nav .chart1-r {
   display: flex;
   justify-content: center;
@@ -58,6 +50,13 @@
   margin-top: 50px;
   margin-left: 15px;
 }
+.dashboard .card-1-text {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+}
 /* .top-nav .sidebar {
   height: 100vh;
   width: 20vw;
@@ -66,9 +65,9 @@
   height: 100vh;
   width: 20vw;
 }
-.top-nav .linechart {
-  height: 45vh;
-  width: 85vw;
+.dashboard .linechart {
+  height: 250px;
+  width: 300px;
 }
 .dashboard .container {
   display: flex;
@@ -128,7 +127,7 @@
   .dashboard .title-img {
     display: flex;
     justify-content: flex-start;
-    padding-left: 3vh;
+    padding-left: 6vh;
     height: 6vh;
     width: 10vw;
   }
@@ -198,6 +197,10 @@
     height: 285px;
     width: 715px;
   }
+  .dashboard .dropdown-1 {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 @media (max-width: 1750px) {
   .dashboard {
@@ -217,6 +220,10 @@
     width: 70px;
     margin-top: 50px;
     margin-left: 15px;
+  }
+  .dashboard .dropdown-1 {
+    display: flex;
+    justify-content: flex-end;
   }
   .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
     background-color: rgb(95, 172, 95);
@@ -281,7 +288,7 @@
 }
 @media (max-width: 1550px) {
   .dashboard {
-    height: 80vh;
+    height: 75vh;
     width: 97vw;
     position: relative;
   }
@@ -299,7 +306,7 @@
     justify-content: flex-start;
     margin-left: 105px;
     width: 90vw;
-    height: 92vh;
+    height: 90vh;
     background: rgb(236, 235, 235);
   }
   .dashboard .sidebar {
@@ -307,6 +314,10 @@
     width: 40px;
     margin-top: 50px;
     margin-left: 15px;
+  }
+  .dashboard .dropdown-1 {
+    display: flex;
+    justify-content: flex-end;
   }
   .dashboard .title-img {
     display: flex;
@@ -383,6 +394,10 @@
     width: 30px;
     margin-top: 50px;
     margin-left: 15px;
+  }
+  .dashboard .dropdown-1 {
+    display: flex;
+    justify-content: flex-end;
   }
   .dashboard .title-img {
     display: flex;

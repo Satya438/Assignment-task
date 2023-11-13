@@ -1,13 +1,15 @@
-import * as React from "react";
+import React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Grid from "@mui/material/Grid";
+import Hidden from "@mui/material/Hidden";
 
 // Generate Order Data
-function createData(id, date, name, shipTo, paymentMethod, amount) {
-  return { id, date, name, shipTo, paymentMethod, amount };
+function createData(id, date, name, shipTo) {
+  return { id, date, name, shipTo };
 }
 
 const rows = [
@@ -25,27 +27,29 @@ export default function Orders() {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            {/* <TableCell>Payment Method</TableCell> */}
-            {/* <TableCell align="right">Sale Amount</TableCell> */}
+            <Hidden xsDown>
+              <TableCell>Name</TableCell>
+            </Hidden>
+            <Hidden xsDown>
+              <TableCell>Ship To</TableCell>
+            </Hidden>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              {/* <TableCell>{row.paymentMethod}</TableCell> */}
-              {/* <TableCell align="right">{`$${row.amount}`}</TableCell> */}
+              <Hidden xsDown>
+                <TableCell>{row.name}</TableCell>
+              </Hidden>
+              <Hidden xsDown>
+                <TableCell>{row.shipTo}</TableCell>
+              </Hidden>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-      {/* <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-        See more orders
-      </Link> */}
+      {/* Add more content or links as needed */}
     </React.Fragment>
   );
 }

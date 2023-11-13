@@ -133,10 +133,10 @@ const Navbar = () => {
                 </div>
               </Toolbar>
             </div>
-            <div class="col-10" className="container">
+            <div className="container">
               <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
                 <div
-                  class="row"
+                  class="col"
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
@@ -172,15 +172,7 @@ const Navbar = () => {
                                   marginTop: "10PX",
                                 }}
                               >
-                                <div
-                                  class="col-8"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    fontSize: "18PX",
-                                    fontWeight: "600",
-                                  }}
-                                >
+                                <div className="card-1-text">
                                   Checking account
                                 </div>
                                 <div
@@ -188,12 +180,13 @@ const Navbar = () => {
                                   style={{
                                     display: "flex",
                                     justifyContent: "center",
-                                    width: "425px",
-                                    height: "280px",
                                     marginTop: "25px",
                                   }}
                                 >
-                                  <LineChart className="linechart" data={data} />
+                                  <LineChart
+                                    className="linechart"
+                                    data={data}
+                                  />
                                 </div>
                                 <div className="dropdown-1">
                                   <Box sx={{ minWidth: 60 }}>
@@ -272,24 +265,15 @@ const Navbar = () => {
                                   justifyContent: "space-between",
                                   direction: "row",
                                   marginTop: "10PX",
-                                  height: "305px",
                                 }}
                               >
-                                <div
-                                  class="col-8"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    fontSize: "16PX",
-                                  }}
-                                >
+                                <div className="card-1-text">
                                   Invoice Owned To you
                                   <div
                                     class="row"
                                     style={{
                                       display: "flex",
                                       justifyContent: "center",
-                                      width: "565px",
                                       marginTop: "25px",
                                     }}
                                   >
@@ -351,8 +335,6 @@ const Navbar = () => {
                                     style={{
                                       display: "flex",
                                       justifyContent: "center",
-                                      width: "500px",
-                                      height: "285px",
                                       marginTop: "25px",
                                     }}
                                   >
@@ -434,22 +416,13 @@ const Navbar = () => {
                                   justifyContent: "space-between",
                                   direction: "row",
                                   marginTop: "10PX",
-                                  height: "295px",
                                 }}
                               >
-                                <div
-                                  class="col-8"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    fontSize: "16PX",
-                                  }}
-                                >
+                                <div className="card-1-text">
                                   Account Watchlist
                                   <div
                                     class="row card-4"
                                     style={{
-                                      width: "595px",
                                       marginTop: "25px",
                                     }}
                                   >
