@@ -209,7 +209,7 @@
     justify-content: flex-start;
     margin-left: 105px;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     background: rgb(236, 235, 235);
   }
   .dashboard .title-img {
@@ -220,7 +220,7 @@
     width: 10vw;
   }
   .dashboard .css-x90y38-MuiPaper-root {
-    height: 255px;
+    height: 245px;
     width: 585px;
   }
   .dashboard .search-input {
@@ -262,34 +262,74 @@
     height: 150px;
     width: 300px;
   }
-  .top-nav .charts2 {
-    height: 100vh;
-    width: 20vw;
-  }
-  .top-nav .linechart {
-    height: 45vh;
-    width: 85vw;
-  }
-  .top-nav .container {
-    margin-left: 105px;
+}
+@media (max-width: 1280px) {
+  .dashboard {
+    height: 65vh;
     width: 90vw;
-    height: 88.5vh;
+    position: relative;
+  }
+  .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: rgb(95, 172, 95);
+    width: 115px;
+  }
+  .dashboard .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 105px;
+    width: 100vw;
+    height: 85vh;
     background: rgb(236, 235, 235);
   }
-  .top-nav .card-1 {
-    height: 14rem;
-    width: 20rem;
+  .dashboard .title-img {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 55vh;
+    height: 6vh;
+    width: 10vw;
   }
-  .top-nav .card-2 {
-    height: 14rem;
-    width: 20rem;
+  .dashboard .css-x90y38-MuiPaper-root {
+    height: 235px;
+    width: 495px;
   }
-  .top-nav .card-3 {
-    height: 14rem;
-    width: 20rem;
+  .dashboard .search-input {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-left: 100%;
+    width: 120px;
+    height: 20px;
+    /* padding-left: 80rem; */
+    border-radius: 10px;
   }
-  .top-nav .card-4 {
-    height: 14rem;
-    width: 20rem;
+  .dashboard .notigfication-logo {
+    width: 55px;
+    margin-left: 35px;
+    margin-top: 15px;
+  }
+  .dashboard .linechart {
+    height: 280px;
+    width: 240px;
+  }
+  .dashboard .css-lmilxk-MuiTypography-root {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: 15px; */
+  }
+  .dashboard .badges {
+    display: flex;
+    justify-content: center;
+  }
+  .top-nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: 10vh;
+    width: 65vw;
+    padding-top: 15px;
+  }
+  .dashboard .svg:not(:root) {
+    height: 150px;
+    width: 300px;
   }
 }
