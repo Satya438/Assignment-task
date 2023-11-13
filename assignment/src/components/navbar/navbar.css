@@ -119,6 +119,86 @@
   justify-content: flex-end;
   /* margin-left: 65px; */
 }
+@media (max-width: 1920px) {
+  .dashboard {
+    height: 90vh;
+    width: 100vw;
+    position: relative;
+  }
+  .dashboard .title-img {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3vh;
+    height: 6vh;
+    width: 10vw;
+  }
+  .dashboard .sidebar {
+    position: relative;
+    width: 70px;
+    margin-top: 50px;
+    margin-left: 15px;
+  }
+  .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: rgb(95, 172, 95);
+    width: 115px;
+  }
+  .dashboard .order-table {
+    width: 280px;
+  }
+  .dashboard .css-lmilxk-MuiTypography-root {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  .dashboard .search-input {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 80%;
+    width: 120px;
+    height: 20px;
+    /* padding-left: 80rem; */
+    border-radius: 10px;
+  }
+  .dashboard .notigfication-logo {
+    width: 55px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  .dashboard .container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 105px;
+    width: 100vw;
+    height: 90.25vh;
+    background: rgb(236, 235, 235);
+  }
+  .dashboard .svg {
+    height: 325px;
+    width: 505px;
+  }
+  .dashboard .card-1-text {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: 180px; */
+    font-size: 16px;
+  }
+  .dashboard .button-new {
+    display: flex;
+    justify-content: flex-end;
+    /* margin-right: 95px; */
+  }
+  .top-nav {
+    display: flex;
+    height: 8vh;
+    width: 85vw;
+    padding-top: 15px;
+  }
+  .dashboard .css-x90y38-MuiPaper-root {
+    height: 285px;
+    width: 715px;
+  }
+}
 @media (max-width: 1750px) {
   .dashboard {
     height: 90vh;
@@ -208,6 +288,10 @@
   .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
     background-color: rgb(95, 172, 95);
     width: 115px;
+  }
+  .dashboard .css-sfhqdt {
+    height: 255px;
+    width: 605px;
   }
   .dashboard .container {
     position: relative;
@@ -334,6 +418,10 @@
     display: flex;
     justify-content: flex-start;
     /* margin-left: 15px; */
+  }
+  .dashboard .css-sfhqdt {
+    height: 235px;
+    width: 495px;
   }
   .dashboard .badges {
     display: flex;
