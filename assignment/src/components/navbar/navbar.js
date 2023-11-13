@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="top-nav" variant="outlined">
           <img alt="" className="title-img" src={logo} />
           <input className="search-input" />
-          <div style={{ width: "55px", marginLeft: "25px", marginTop: "15px" }}>
+          <div className="notigfication-logo">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="64px"
