@@ -398,7 +398,7 @@
 @media (max-width: 1280px) {
   .dashboard {
     height: 35vh;
-    width: 99vw;
+    width: 100vw;
     position: relative;
   }
   ::-webkit-scrollbar {
@@ -407,14 +407,13 @@
   .dashboard .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
     background-color: rgb(95, 172, 95);
     width: 115px;
-    /* color: white; */
     font-size: 14px;
   }
   .dashboard .container {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    width: 100vw;
+    width: 98vw;
     height: 90vh;
     background: rgb(236, 235, 235);
   }
