@@ -398,7 +398,7 @@
 @media (max-width: 1280px) {
   .dashboard {
     height: 45vh;
-    width: 100vw;
+    width: 100vh;
     position: relative;
   }
   ::-webkit-scrollbar {
@@ -441,8 +441,8 @@
     width: 10vw;
   }
   .dashboard .css-x90y38-MuiPaper-root {
-    height: 235px;
-    width: 515px;
+    height: 39.265vh;
+    width: 40.234375vw;
   }
   .dashboard .search-input {
     display: flex;
