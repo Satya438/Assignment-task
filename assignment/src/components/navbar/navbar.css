@@ -413,13 +413,13 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
-    width: 98vw;
+    width: 100vw;
     height: 90vh;
     background: rgb(236, 235, 235);
   }
   .dashboard .sidebar {
     position: relative;
-    width: 30px;
+    width: 25px;
     margin-top: 30px;
     margin-right: 10px;
   }
@@ -436,12 +436,12 @@
   .dashboard .title-img {
     display: flex;
     justify-content: flex-start;
-    padding-left: 55vh;
+    padding-left: 57vh;
     height: 5.75vh;
     width: 10vw;
   }
   .dashboard .css-x90y38-MuiPaper-root {
-    height: 235px;
+    height: 225px;
     width: 495px;
   }
   .dashboard .search-input {
