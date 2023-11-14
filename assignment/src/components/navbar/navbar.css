@@ -397,7 +397,7 @@
 }
 @media (max-width: 1280px) {
   .dashboard {
-    height: 35vh;
+    height: 45vh;
     width: 100vw;
     position: relative;
   }
@@ -414,12 +414,12 @@
     display: flex;
     justify-content: flex-start;
     width: 100vw;
-    height: 90vh;
+    height: 95vh;
     background: rgb(236, 235, 235);
   }
   .dashboard .sidebar {
     position: relative;
-    width: 25px;
+    width: 30px;
     margin-top: 30px;
     margin-right: 10px;
   }
@@ -436,7 +436,7 @@
   .dashboard .title-img {
     display: flex;
     justify-content: flex-start;
-    padding-left: 57vh;
+    padding-left: 59vh;
     height: 5.75vh;
     width: 10vw;
   }
