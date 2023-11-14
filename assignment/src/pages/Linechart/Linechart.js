@@ -19,7 +19,8 @@ function LineChart({ data }) {
     const line = d3
       .line()
       .x((_, i) => (i * width) / (data.length - 1))
-      .y((d) => (1 - d / d3.max(data)) * height);
+      .y((d) => (1 - d / d3.max(data)) * height)
+      .curve(d3.curveCatmullRom.alpha(0.5));
 
     // Clear previous chart
     svg.selectAll("*").remove();
@@ -33,9 +34,18 @@ function LineChart({ data }) {
     g.append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "blue")
+      .attr("stroke", "#60BB6E")
       .attr("stroke-width", 2)
       .attr("d", line);
+
+    // Add x-axis
+    const xScale = d3
+      .scaleLinear()
+      .domain([0, data.length - 1])
+      .range([0, width]);
+    const xAxis = d3.axisBottom(xScale).ticks(data.length);
+
+    g.append("g").attr("transform", `translate(0, ${height})`).call(xAxis);
   }, [data]);
 
   return <svg ref={chartRef}></svg>;

@@ -16,7 +16,6 @@ const rows = [
   createData(1, "16 Mar, 2019", "VISA ⠀•••• 2574", 866.99),
   createData(2, "16 Mar, 2019", "MC ⠀•••• 1253", 100.81),
   createData(3, "16 Mar, 2019", "AMEX ⠀•••• 2000", 654.39),
-  createData(4, "15 Mar, 2019", "VISA ⠀•••• 5919", 212.79),
 ];
 
 export default function Orders() {
@@ -26,6 +25,12 @@ export default function Orders() {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
+            <Hidden xsDown>
+              <TableCell></TableCell>
+            </Hidden>
+            <Hidden xsDown>
+              <TableCell></TableCell>
+            </Hidden>
             <Hidden xsDown>
               <TableCell>Name</TableCell>
             </Hidden>
@@ -38,6 +43,12 @@ export default function Orders() {
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
+              <Hidden xsDown>
+                <TableCell></TableCell>
+              </Hidden>
+              <Hidden xsDown>
+                <TableCell></TableCell>
+              </Hidden>
               <Hidden xsDown>
                 <TableCell>{row.name}</TableCell>
               </Hidden>

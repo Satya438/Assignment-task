@@ -28,7 +28,7 @@ function BarChart() {
 
     // Set dimensions based on the container size
     const containerWidth = svgRef.current.clientWidth;
-    const containerHeight = 250; // Set a fixed height or adjust dynamically
+    const containerHeight = 230; // Set a fixed height or adjust dynamically
 
     const margin = { top: 20, right: 20, bottom: 60, left: 0 };
     const width = containerWidth - margin.left - margin.right;
