@@ -498,4 +498,7 @@
   .dashboard .profile-pic {
     margin-top: 0px;
   }
+  .dashboard .divider {
+    width: 356px;
+  }
 }

@@ -442,7 +442,7 @@ const Navbar = () => {
                                   </Box>
                                 </div>
                               </div>
-                              <Divider style={{ width: "545px" }} />
+                              <Divider className="divider" />
                               <div
                                 style={{
                                   display: "flex",
@@ -503,7 +503,7 @@ const Navbar = () => {
                                   </Button>
                                 </div>
                               </div>
-                              <Divider style={{ width: "545px" }} />
+                              <Divider className="divider" />
                               <div
                                 class="row"
                                 style={{
@@ -586,7 +586,7 @@ const Navbar = () => {
                                   </div>
                                 </div>
                               </div>
-                              <Divider style={{ width: "545px" }} />
+                              <Divider className="divider" />
                               <div
                                 class="row card-3"
                                 style={{
@@ -637,7 +637,7 @@ const Navbar = () => {
                                 </div>
                                 <div class="col-1"></div>
                               </div>
-                              <Divider style={{ width: "545px" }} />
+                              <Divider className="divider" />
                               <div class="row card-4">
                                 <Orders className="order-table" />
                               </div>
